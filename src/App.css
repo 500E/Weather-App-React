@@ -1,33 +1,136 @@
-.App {
+@import url("https://fonts.googleapis.com/css?family=Roboto|Rubik:500");
+
+:root {
+  --main-col: whitesmoke;
+  --sec-col: #212121;
+  --thir-col: #eeeeee;
+  --four-col: #69f0ae;
+  --border: 2px solid var(--four-col);
+  --border-radius: 3px;
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --padding: 0.25rem 1rem;
+  --margin: 0.5rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--thir-col);
+  font-family: "Roboto", sans-serif;
+}
+
+button {
+  border: var(--border);
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  margin: var(--margin);
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+  text-transform: uppercase;
+  transition: 1s background-color linear;
+}
+
+button:hover {
+  background-color: var(--four-col);
+}
+
+form {
+  background-color: var(--thir-col);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  width: 85vw;
+  margin: 0 auto;
+}
+
+header {
+  background-color: var(--four-col);
+  box-shadow: var(--box-shadow);
+  color: var(--sec-col);
+  margin: 0 auto 2rem auto;
   text-align: center;
+  line-height: 1.4;
+  width: 85vw;
+  font-family: "Rubik", sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+header > p {
+  padding-bottom: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1 {
+  margin: 0;
+  text-align: center;
+  letter-spacing: 3px;
 }
 
-.App-link {
-  color: #61dafb;
+img {
+  position: absolute;
+  width: 4em;
+  top: 2em;
+  right: 3em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+input[type="text"] {
+  background-color: transparent;
+  border: 0;
+  border-bottom: var(--border);
+  border-radius: var(--border-radius);
+  width: 30%;
+  letter-spacing: 2px;
+  margin: var(--margin);
+  padding: var(--padding);
+  color: var(--sec-col);
+  text-transform: uppercase;
+  outline: none;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px var(--thir-col) inset;
+  -webkit-text-fill-color: var(--sec-col) !important;
+}
+
+span {
+  font-weight: lighter;
+}
+
+.app-container {
+  height: 100vh;
+}
+
+.text-info {
+  padding: 0.8rem;
+  letter-spacing: 0.7px;
+}
+
+.weather-info {
+  background-color: var(--thir-col);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  color: var(--sec-col);
+  width: 85vw;
+  margin: 2rem auto;
+  position: relative;
+}
+
+.weather-info > p {
+  padding: 0.8rem;
+  letter-spacing: 0.7px;
+  font-weight: bold;
+}
+
+@media (min-width: 900px) {
+  body {
+    font-size: 1.6rem;
   }
-  to {
-    transform: rotate(360deg);
+  form {
+    width: 60vw;
+  }
+  header {
+    width: 60vw;
+  }
+  .weather-info {
+    width: 60vw;
   }
 }
